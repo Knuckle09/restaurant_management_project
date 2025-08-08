@@ -1,0 +1,36 @@
+{%load static%}
+<!doctype html>
+<html lang="en">
+<head><
+    <meta charset="utf-8">
+    <title>About - {{restaurant_name}}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+        body{font-family:Aria;,Helvetica,sans-serif;margin:24px;}
+        header nav a{margin-right:12px;text-decoration:none;}
+        .hero{display:flex; flex-wrap:wrap; gap:20px; align-items:center;}
+        .hero img{max-width:320px; width:100%; height:auto; border-radius:8px;}
+        .desc{max-width:700px;}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{%url 'home' %}">Home</a>
+            <a href="{%url 'about' %}">About</a>
+        </nav>
+    </header>
+    <main>
+        <h1>About{{restaurant_name}}</h1>
+
+        <section class="hero">
+
+            <div class="desc">
+                <p>{{description}}</p>
+                <p><strong>Open Hours:</strong>Mon-Sun:10:00 AM - 10:00 PM</p>
+                <p><strong>Location:</strong>Example Street 123, Your City</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
